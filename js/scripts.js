@@ -73,6 +73,11 @@ let pokemonList = [
   },
 ];
 
-for (i = 0; i < 13; i++) {
-  document.write(pokemonList[i].indexNum + " - " + pokemonList[i].name + "<br>")
+for (i = 0; i < pokemonList.length; i++) {
+  document.write(pokemonList[i].indexNum + " - " + pokemonList[i].name + " (Height: " + pokemonList[i].height + "\")")
+    if (pokemonList[i].height >= 79) {
+    document.write(" Wow, that's huge!<br>")
+  } else {
+    document.write("<br>")
+  }
 }
