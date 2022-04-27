@@ -60,3 +60,7 @@ let pokemonList = [
     type: ['Bug', 'Flying']
   },
 ];
+
+for (i = 0; i < 13; i++) {
+  document.write(pokemonList[i].indexNum + " - " + pokemonList[i].name + "<br>")
+}
