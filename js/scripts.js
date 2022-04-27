@@ -73,8 +73,10 @@ let pokemonList = [
   },
 ];
 
+// Lists all Pokémon preceeded with index number, followed by weight.
 for (i = 0; i < pokemonList.length; i++) {
   document.write(pokemonList[i].indexNum + " - " + pokemonList[i].name + " (Height: " + pokemonList[i].height + "\")")
+  // Adds label "Wow, that's huge!" to Pokémon at least 79 inches tall.
     if (pokemonList[i].height >= 79) {
     document.write(" Wow, that's huge!<br>")
   } else {
