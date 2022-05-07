@@ -73,13 +73,13 @@ let pokemonList = [
   },
 ];
 
-// Lists all Pokémon preceeded with index number, followed by weight.
-for (i = 0; i < pokemonList.length; i++) {
-  document.write(pokemonList[i].indexNum + " - " + pokemonList[i].name + " (Height: " + pokemonList[i].height + "\")")
+// Lists all Pokémon preceeded by index number, followed by weight.
+pokemonList.forEach(function(pokemon) {
+  document.write(pokemon.indexNum + " - " + pokemon.name + " (Height: " + pokemon.height + "\")")
   // Adds label "Wow, that's huge!" to Pokémon at least 79 inches tall.
-    if (pokemonList[i].height >= 79) {
+    if (pokemon.height >= 79) {
     document.write(" Wow, that's huge!<br>")
   } else {
     document.write("<br>")
   }
-}
+});
