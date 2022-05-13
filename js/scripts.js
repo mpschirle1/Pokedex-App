@@ -74,23 +74,28 @@ let pokemonRepository = (function () {
     },
   ];
 
+  function addListItem(pokemon) {
+  let pokemonList = document.querySelector('.pokemon-list');
+  let listItem = document.createElement('li');
+  let button = document.createElement('button');
+  button.innerText = pokemon.name;
+  button.classList.add('button-class')
+  listItem.appendChild(button);
+  pokemonList.appendChild(listItem);
+}
+
   return {
     add : function(pokemon) {
       pokemonList.push(pokemon);
     },
     getAll : function() {
       return pokemonList;
-    }
+    },
+    addListItem : addListItem
   };
 })();
 
 // Lists all Pokémon preceeded by index number, followed by weight.
 pokemonRepository.getAll().forEach(function(pokemon) {
-  document.write(pokemon.indexNum + " - " + pokemon.name + " (Height: " + pokemon.height + "\")")
-  // Adds label "Wow, that's huge!" to Pokémon at least 79 inches tall.
-    if (pokemon.height >= 79) {
-    document.write(" Wow, that's huge!<br>")
-  } else {
-    document.write("<br>")
-  }
+  pokemonRepository.addListItem(pokemon);
 });
