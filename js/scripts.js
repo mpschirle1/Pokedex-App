@@ -74,15 +74,27 @@ let pokemonRepository = (function () {
     },
   ];
 
+  // Call this function with event listener
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
   function addListItem(pokemon) {
-  let pokemonList = document.querySelector('.pokemon-list');
-  let listItem = document.createElement('li');
-  let button = document.createElement('button');
-  button.innerText = pokemon.name;
-  button.classList.add('button-class')
-  listItem.appendChild(button);
-  pokemonList.appendChild(listItem);
-}
+    let pokemonList = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('button-class')
+    listItem.appendChild(button);
+    pokemonList.appendChild(listItem);
+    clickEvent(button, pokemon);
+  }
+
+  function clickEvent(button, pokemon) {
+    button.addEventListener('click', function() {
+      showDetails(pokemon);
+    });
+  }
 
   return {
     add : function(pokemon) {
