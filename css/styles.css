@@ -2,6 +2,7 @@
   --background: #333;
   --text-color: #ccc;
   --body-font: 'Abel', sans-serif;
+  --button-color: #892b2b;
 }
 
 body {
@@ -9,5 +10,39 @@ body {
   color: #ccc;
   font-family: var(--body-font);
   font-size: 16px;
-  line-height: 2;
+  line-height: 3;
+}
+
+h1 {
+  font: inherit;
+  font-size: 30px;
+  text-align: center;
+}
+
+.button-class {
+  border: none; /* overwrites browser defaults */
+  display: inline-block;
+  font-family: inherit;
+  font-size: 16px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.4s opacity;
+  width: 250px;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+ul {
+  list-style-type: none; /* Removes bullet points */
+  text-align: center;
+  padding: 0;
 }
