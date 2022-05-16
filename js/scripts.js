@@ -4,7 +4,9 @@ let pokemonRepository = (function () {
 
   // Call this function with event listener
   function showDetails(pokemon) {
-    console.log(pokemon);
+    loadDetails(pokemon).then(function () {
+      console.log(pokemon);
+    });
   }
 
   function addListItem(pokemon) {
