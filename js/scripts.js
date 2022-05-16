@@ -24,6 +24,22 @@ let pokemonRepository = (function () {
     });
   }
 
+  function loadList() {
+    return fetch(apiUrl).then(function (response) {
+      return repsonse.json();
+    }).then(function (json) {
+      json.results.forEach(function (item) {
+        let pokemon = {
+          name: item.name,
+          detailsUrl: item.url
+        };
+        add(pokemon);
+      });
+    }).catch(function (e) {
+      console.error(e);
+    })
+  }
+
   return {
     add : function(pokemon) {
       pokemonList.push(pokemon);
@@ -32,10 +48,12 @@ let pokemonRepository = (function () {
       return pokemonList;
     },
     addListItem : addListItem
+    loadList: loadList
   };
 })();
 
-// Lists all Pokémon preceeded by index number, followed by weight.
-pokemonRepository.getAll().forEach(function(pokemon) {
-  pokemonRepository.addListItem(pokemon);
+pokemonRepository.loadList().then(function() {
+  pokemonRepository.getAll().forEach(function(pokemon) {
+    pokemonRepository.addListItem(pokemon);
+  });
 });
