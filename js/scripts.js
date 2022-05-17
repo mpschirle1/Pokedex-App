@@ -52,7 +52,7 @@ let pokemonRepository = (function () {
 
   function loadDetails(item) {
     let url = item.detailsUrl;
-    return fetch.url(url).then(function (repsonse) {
+    return fetch(url).then(function (repsonse) {
       return repsonse.json();
     }).then(function (details) {
       item.imageUrl = details.sprites.front_default;
@@ -68,7 +68,8 @@ let pokemonRepository = (function () {
     getAll : getAll,
     addListItem : addListItem,
     loadList: loadList,
-    loadDetails: loadDetails
+    loadDetails: loadDetails,
+    showDetails: showDetails
   };
 })();
 
