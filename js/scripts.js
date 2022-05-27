@@ -60,8 +60,12 @@ let pokemonRepository = (function () {
       item.id = details.id;
       item.feet = Math.floor(details.height * 0.32808); // dm to ft
       item.inches = Math.round((details.height * 0.32808 - item.feet) * 12);
+
       item.weight = (details.weight * 0.2204622622); // hg to lb
-      //item.types = details.types.name;
+      if (item.inches === 12) {
+        item.inches = 0;
+        item.feet++;
+      }
 
       let types = [];
       details.types.forEach((item) => types.push(item.type.name));
