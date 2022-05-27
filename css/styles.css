@@ -87,6 +87,7 @@ ul {
   width: 100%;
   max-width: 300px;
   text-align: center;
+  border: 5px solid var(--button-color);
 }
 
 .modal-close {
