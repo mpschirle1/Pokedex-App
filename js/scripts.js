@@ -58,13 +58,14 @@ let pokemonRepository = (function () {
     }).then(function (details) {
       item.imageUrl = details.sprites.front_default;
       item.id = details.id;
+      
       item.feet = Math.floor(details.height * 0.32808); // dm to ft
       item.inches = Math.round((details.height * 0.32808 - item.feet) * 12);
-
-      item.weight = (details.weight * 0.2204622622); // hg to lb
       if (item.inches === 12) {
         item.inches = 0;
         item.feet++;
+
+      item.weight = (details.weight * 0.2204622622); // hg to lb
       }
 
       let types = [];
