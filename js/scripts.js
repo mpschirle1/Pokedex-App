@@ -2,6 +2,26 @@ let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
 
+  // Search function for Navbar
+  let search = document.getElementById('poke-search');
+  search.addEventListener('input', searchList);
+
+  function searchList() {
+  let searchInput = document.getElementById('poke-search').value;
+  // Prevents no results when user input includes upper case letters
+  searchInput = searchInput.toLowerCase();
+  let listItem = $('li');
+  listItem.each(function () {
+    let item = $(this);
+    let name = item.text();
+    if (name.includes(searchInput)) {
+      item.show();
+    } else {
+      item.hide();
+    }
+  });
+}
+
   // Call this function with event listener
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
