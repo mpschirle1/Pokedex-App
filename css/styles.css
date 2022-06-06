@@ -101,9 +101,24 @@ fieldset[disabled] .btn-custom.active {
   opacity: 0.8;
 }
 
+#poke-modal-body {
+  line-height: 10px;
+}
+
+#about-modal-body {
+  line-height: 30px;
+}
+
 .pokemon-sprite {
   filter: drop-shadow(5px 5px 5px black);
   width: 50%;
+  margin-bottom: 20px;
+}
+
+#pokeball {
+  filter: drop-shadow(5px 5px 10px black);
+  width: 25%;
+  margin-bottom: 20px;
 }
 
 .pokemon-type {
