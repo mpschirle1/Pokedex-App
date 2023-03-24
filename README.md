@@ -1,6 +1,7 @@
 # Pokédex Application
 
 ![Application Screenshot](pokedex-app-screenshot.png)
+<pre><img src="img/pokedex-app-mobile-screenshot.png" width="400"> <img src="pokedex-app-mobile-screenshot-2.png" width="400"></pre>
 
 ## About
 
