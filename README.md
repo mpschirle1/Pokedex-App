@@ -1,7 +1,7 @@
 # Pokédex Application
 
-![Application Screenshot](pokedex-app-screenshot.png)
-<pre><img src="img/pokedex-app-mobile-screenshot.png" width="400"> <img src="pokedex-app-mobile-screenshot-2.png" width="400"></pre>
+<img src="img/pokedex-app-screenshot.png">
+<pre><img src="img/pokedex-app-mobile-screenshot.png" width="400">  <img src="pokedex-app-mobile-screenshot-2.png" width="400"></pre>
 
 ## About
 
@@ -17,6 +17,8 @@ Click on a Pokémon to see more details on that selected Pokémon. Use the searc
 - Bootstrap v4.3.1
 - Pokémon API - https://pokeapi.co/api/v2/pokemon/
 
-#### Link
+### Application Link
 
 Pokédex App (https://mpschirle1.github.io/Pokedex-App/)
+
+
