@@ -1,7 +1,7 @@
 # Pokédex Application
 
 <img src="img/pokedex-app-screenshot.png">
-<pre><img src="img/pokedex-app-mobile-screenshot.png" width="400">  <img src="pokedex-app-mobile-screenshot-2.png" width="400"></pre>
+<pre><img src="img/pokedex-app-mobile-screenshot.png" width="450">  <img src="img/pokedex-app-mobile-screenshot-2.png" width="450"></pre>
 
 ## About
 
